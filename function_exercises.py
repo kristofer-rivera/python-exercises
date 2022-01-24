@@ -13,13 +13,6 @@ is_two('8')
 
 # Question 2 
 
-def is_vowel(x):
-    if x.lower() in('a', 'e', 'i', 'o', 'u'):
-        return True 
-    else: 
-        return False
-
-# OR Class solution
 
 def is_vowel(x):
     if type(x) == str:
@@ -36,13 +29,6 @@ is_vowel('t')
 
 # Question 3 
 
-def is_consonant(x):
-    if x.isdigit() or is_vowel(x):
-        return False
-    else:
-        return True 
-
-# OR Class solution
 
 def is_consonant(x):
     if type(x) == str:
@@ -97,26 +83,8 @@ calculate_tip(.19, 34.50)
 calculate_tip(.20, 100)
 calculate_tip(.21, 76)
 
-#OR if you want percent input to be an interger
 
-def calculate_tip(percent, total):
-    return (percent/100) * total
 
-calculate_tip(19, 34.50)
-calculate_tip(20, 100)
-calculate_tip(21, 76)
-
-#OR Class solution
-
-def calculate_tip(bill, tip_percentage=0.2):
-    if tip_percentage < 0 or tip_percentage > 1:
-        return 'the tip percentage must be between 0 and 1'
-    tip_amount = tip_percentage * bill
-    return tip_amount
-
-calculate_tip(34.50, .19)
-calculate_tip(100, .30)
-calculate_tip(76, 21)
 
 # Question 6 
 # Uses my calcuate_tip solution 
@@ -127,13 +95,6 @@ apply_discount(100, .20)
 apply_discount(50, .50)
 apply_discount(1000, .10)
 
-# Or class solution
-
-def apply_discount(price, discount_percentage):
-    discount = price * discount_percentage
-    return price - discount 
-
-apply_discount(20, .5)
 
 # Question 7 
 
@@ -179,15 +140,7 @@ remove_vowels('helicopter')
 
 # Question 10
 
-def remove_special_characters(str):
-    return ''.join([x for x in str if x.isidentifier() or x == ' '])
-def normalize_name(str):
-    return remove_special_characters(str).lower().strip().replace(' ', '_')
 
-
-normalize_name('First Name')
-normalize_name('% Completed')
-normalize_name('&# Hello There Innis')
 
 # Class solution
 
@@ -203,12 +156,6 @@ def normalize_name(string):
 
 
 # Question 11 
-
-def cumulative_sum(str):
-     cu_list = []
-     length = len(str)
-     cu_list = [sum(str[0:x:1]) for x in range(0, length+1)]
-     return cu_list[1:]
 
 
     cumulative_sum([1, 1, 1])
